@@ -10,7 +10,7 @@ import (
 	"io/ioutil"
 	"os"
 
-	"github.com/linkedin/goavro/v2"
+	"github.com/xiemingxun/goavro/v2"
 )
 
 // roundtrip is a tool for checking avro

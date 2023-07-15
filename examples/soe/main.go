@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/linkedin/goavro/v2"
+	"github.com/xiemingxun/goavro/v2"
 )
 
 func main() {
