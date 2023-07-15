@@ -412,6 +412,14 @@ func (c *Codec) BinaryFromNative(buf []byte, datum interface{}) ([]byte, error) 
 	return newBuf, nil
 }
 
+func (c *Codec) BinaryFromNativeOutput(out io.Writer, datum interface{}) error {
+	err := c.binaryFromNativeOutput(out, datum)
+	if err != nil {
+		return err // if error, return original byte slice
+	}
+	return nil
+}
+
 // NativeFromBinary returns a native datum value from the binary encoded byte
 // slice in accordance with the Avro schema supplied when creating the Codec. On
 // success, it returns the decoded datum, a byte slice containing the remaining
